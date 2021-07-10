@@ -65,6 +65,14 @@ namespace LinkedListOperation
                     obj.Insert(30, 40);
                     obj.Display();
                     break;
+                case 9:
+                    obj.InsertLast(56);
+                    obj.InsertLast(30);
+                    obj.InsertLast(40);
+                    obj.InsertLast(70);
+                    obj.Sort();
+                    obj.Display();
+                    break;
 
 
 
