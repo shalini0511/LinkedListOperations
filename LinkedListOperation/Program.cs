@@ -9,9 +9,9 @@ namespace LinkedListOperation
             //UseCase 1
             Operations obj = new Operations();
             //Insertion Operation
-            obj.Append(56);
-            obj.Append(30);
-            obj.Append(70);
+            obj.InsertLast(56);
+            obj.InsertBetween(2,30);
+            obj.InsertLast(70);
             //Display Operation
             Console.WriteLine("*****Appending*****");
             obj.Display();
