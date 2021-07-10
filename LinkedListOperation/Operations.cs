@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.Linq;
+using System.Threading.Tasks;
 namespace LinkedListOperation
 {
     class Operations
@@ -48,7 +49,7 @@ namespace LinkedListOperation
             new_node.data = new_data;//assign data element
             new_node.next = null;//assign null to next of new node
             //check linkedlist empty 
-            if(head==null)
+            if (head == null)
             {
                 head = new_node;
 
@@ -58,11 +59,11 @@ namespace LinkedListOperation
                 //traverse to last node
                 Node temp = new Node(new_data);
                 temp = head;
-                while(temp.next!=null)
+                while (temp.next != null)
                 {
                     temp = temp.next;
                 }
-                temp.next=new_node;
+                temp.next = new_node;
 
             }
 
@@ -100,25 +101,40 @@ namespace LinkedListOperation
 
             }
         }
-        //Display the nodes
-        public void Display()
+        //Deleting first element
+        //Deleting the first node
+        public Node DeleteFirst()
         {
-            Console.WriteLine("**********Displaying Nodes************");
-            Node temp = this.head;
-            if (temp == null)
+            if (this.head == null)
             {
-                Console.WriteLine("Linked List is Empty");
-                return;
+                return null;
             }
-            else
-            {
-                while (temp != null)
-                {
-                    Console.WriteLine(" " + temp.data + " ");
-                    temp = temp.next;
-                }
-            }
+            this.head = this.head.next;
+            return this.head;
         }
 
-    }
+
+
+
+        //Display the nodes
+        public void Display()
+            {
+                Console.WriteLine("**********Displaying Nodes************");
+                Node temp = this.head;
+                if (temp == null)
+                {
+                    Console.WriteLine("Linked List is Empty");
+                    return;
+                }
+                else
+                {
+                    while (temp != null)
+                    {
+                        Console.WriteLine(" " + temp.data + " ");
+                        temp = temp.next;
+                    }
+                }
+            }
+
+    }    
 }
