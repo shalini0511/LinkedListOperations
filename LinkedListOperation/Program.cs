@@ -57,6 +57,15 @@ namespace LinkedListOperation
                     obj.InsertLast(70);
                     obj.Search(56);
                     break;
+                case 7:
+
+                    obj.InsertLast(56);
+                    obj.InsertLast(30);
+                    obj.InsertLast(70);
+                    obj.Insert(30, 40);
+                    obj.Display();
+                    break;
+
 
 
             }
